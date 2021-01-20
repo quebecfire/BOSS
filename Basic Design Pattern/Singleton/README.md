@@ -1,16 +1,9 @@
 # Singleton Pattern
 
-## BasicSingleton
-The basic singleton will be instantiated during the class loading.
-This is due to the variable instance is instantiated outside any method.
+## The BasicSingleton
+The basic singleton demonstrate a basic pattern.
+Unfortunately, if you run the main.ccp a couple time, you will realise it's not thread safe.
 
-This drawback of this method is that if the class is not being used at all by the 
-application. It will still be instantiated.
+## The ThreadSafeSingleton
 
-## The LazySingleton
-The , as the name specify it, is very lazy.
-The instance is declared null. 
-It will only get instantiate if we request it, otherwise it won't do anything.
-
-This is why within the getInstance() method, if it never has been called.
-We will instantiate the class.
+This example will focus on the implementation of a thread safe singleton.
